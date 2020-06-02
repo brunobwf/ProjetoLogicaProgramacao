@@ -3,11 +3,11 @@
 <head>
     <script>
 
-        var nome = "Bruno"; //Nome da pessoa;
+        var nome = prompt("Informe o seu nome:"); //Nome da pessoa;
         var imc;
         var infoIMC;
-        var pesoUsuario = prompt("Informe o seu peso:");
-        var alturaUsuario = prompt("Informe sua altura:");
+        var pesoUsuario = prompt(nome+" informe o seu peso:"); //Peso da pessoa
+        var alturaUsuario = prompt(nome+ "informe sua altura:");// Altura da pessoa
 
         function calcularIMC(peso, altura) {
 
