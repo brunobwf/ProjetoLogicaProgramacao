@@ -2,9 +2,24 @@
 
 <head>
     <script>
-        var ano= 2020; //Ano atual
-        var anoNasc = 2000 // Ano de nascimento
-      document.write("A idade do Bruno é: " + (ano - anoNasc) + " anos");
+
+        var ano = 2020; //Ano atual
+        var anoNasc = 2000; //Ano de nascimento
+        var nome = "Bruno"; //Nome da pessoa
+
+        function exibirMensagem() { 
+            document.write("Olá "+ nome +"!");
+            document.write("<br>");
+        }
+
+        function exibirInformacao(informacao) {
+            exibirMensagem();
+            document.write(informacao);
+
+        }
+
+        exibirInformacao("A idade de " + nome + " é: " + (ano - anoNasc) + " anos");
+
     </script>
     <meta charset="UTF-8">
     <title>Lógica de Programação</title>
