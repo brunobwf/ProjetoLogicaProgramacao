@@ -6,11 +6,13 @@
         var nome = "Bruno"; //Nome da pessoa;
         var imc;
         var infoIMC;
+        var pesoUsuario = prompt("Informe o seu peso:");
+        var alturaUsuario = prompt("Informe sua altura:");
 
         function calcularIMC(peso, altura) {
 
             imc = peso / (altura * altura);
-        
+
             if (imc < 18.5) {
                 infoIMC = "Abaixo do Peso";
             } else if (imc >= 18.5 && imc <= 24.9) {
@@ -20,12 +22,11 @@
             } else {
                 infoIMC = "Obesidade";
             }
-
         }
 
         function exibirMensagem() {
-            calcularIMC(56, 1.78);
-            document.write(nome+", seu IMC é de:"+ Math.round(imc));
+            calcularIMC(pesoUsuario,alturaUsuario);
+            document.write(nome + ", seu IMC é de:" + Math.round(imc));
             document.write("<br>");
             document.write(infoIMC);
         }
