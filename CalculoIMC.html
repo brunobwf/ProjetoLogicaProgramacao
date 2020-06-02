@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <script>
+
+        var nome = "Bruno"; //Nome da pessoa;
+        var imc;
+        var infoIMC;
+
+        function calcularIMC(peso, altura) {
+
+            imc = peso / (altura * altura);
+        
+            if (imc < 18.5) {
+                infoIMC = "Abaixo do Peso";
+            } else if (imc >= 18.5 && imc <= 24.9) {
+                infoIMC = "Peso normal";
+            } else if (imc >= 25 && imc <= 29.9) {
+                infoIMC = "Sobrepeso";
+            } else {
+                infoIMC = "Obesidade";
+            }
+
+        }
+
+        function exibirMensagem() {
+            calcularIMC(56, 1.78);
+            document.write(nome+", seu IMC é de:"+ Math.round(imc));
+            document.write("<br>");
+            document.write(infoIMC);
+        }
+
+
+        exibirMensagem();
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Cálculo de IMC com JavaScript</title>
+</head>
+
+<body>
+</body>
+
+</html>
