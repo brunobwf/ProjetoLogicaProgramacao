@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <script>
+
+        var vitorias = parseInt(prompt("Insira o número de vitorias:"));
+        var empates = parseInt(prompt("Insira o número de empates:"));
+        var pontos = 0;
+
+        function calcularPontos(pontosVitoria, pontosEmpate) {
+            if (isNaN(pontosVitoria)|| isNaN(pontosEmpate)) {
+                alert("Por Favor digite os números corretamente.");        
+            } else {
+                pontos = (pontosVitoria * 3) + pontosEmpate;
+            }
+        }
+
+        function exibirMensagem() {
+            calcularPontos(vitorias, empates);
+            document.writeln("Seu time está com:" + pontos + " pontos.");
+            document.writeln("<br>");
+
+            if(pontos > 28){
+                document.writeln("Seu time está melhor que o ano passado.");    
+            }else if(pontos == 28){
+                document.writeln("Seu time está igual ao ano passado.");    
+
+            }else{
+                document.writeln("Seu time está pior que ao ano passado.");    
+            }
+        }
+
+
+        exibirMensagem();
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Futebol - Convertendo String em números</title>
+</head>
+
+<body>
+</body>
+
+</html>
