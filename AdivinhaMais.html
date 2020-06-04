@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <script>
+
+
+        function sorteia() {
+            return Math.round(Math.random() * 10);
+        }
+
+
+        function sorteiaNumeros(quantidade) {
+
+            var segredos = [];
+
+            var numero = 1;
+
+            while (numero <= quantidade) {
+
+                var numeroAleatorio = sorteia();
+                var achou = false;
+
+                for (var i = 0; i < 4; i++) {
+
+                    if (segredos[i] == numeroAleatorio) {
+                        achou = true;
+                        break;
+                    }
+                }
+                if (achou == false) {
+                    segredos.push(numeroAleatorio);
+                    numero++;
+                }
+            }
+
+            return segredos;
+
+        }
+
+        var segredos = sorteiaNumeros(4);
+
+        function verificar() {
+            var achou = false;
+            for (var i = 0; i < 4; i++) {
+
+                if (inputId.value == segredos[i]) {
+                    alert("Você acertou");
+                    achou = true;
+                    break;
+                }
+            }
+
+            if (achou == false) {
+                alert("Você errou");
+            }
+
+            inputId.value = "";
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Jogo de Adivinha com Input e Button</title>
+</head>
+
+<body>
+    <input type="text" id="inputId" />
+    <button onclick="verificar()">Compare com o meu Segredo</button>
+</body>
+
+</html>
